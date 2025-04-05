@@ -969,6 +969,28 @@ local Toggle = Tab:CreateToggle({
    end,
 })
 
+local Section = Tab:CreateSection("Merchants")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Mari",
+   CurrentValue = false,
+   Flag = "maridetection", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Jester",
+   CurrentValue = false,
+   Flag = "jesterdetection", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
 local Section = Tab:CreateSection("Limited Auras")
 
 local Toggle = Tab:CreateToggle({
@@ -1012,7 +1034,7 @@ local Section = Tab:CreateSection("Miscellanous")
 local Toggle = Tab:CreateToggle({
    Name = "Anti-AFK",
    CurrentValue = false,
-   Flag = "AntiAFKToggle",
+   Flag = "miscellaneousafk",
    Callback = function(Value)
       if Value then
          local VirtualUser = game:GetService("VirtualUser")
