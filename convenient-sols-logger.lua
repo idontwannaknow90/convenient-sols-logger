@@ -460,7 +460,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Origin",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "origindetection", 
    Callback = function(Value)
    
    
@@ -470,7 +470,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Hades",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "hadesdetection", 
    Callback = function(Value)
    
    
@@ -480,7 +480,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Celestial : Divine",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "divinedetection", 
    Callback = function(Value)
    
    
@@ -490,7 +490,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Hypervolt",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "voltdetection", 
    Callback = function(Value)
    
    
@@ -500,7 +500,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Velocity",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "velocitydetection", 
    Callback = function(Value)
    
    
@@ -510,7 +510,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Nihility",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "nihildetection", 
    Callback = function(Value)
    
    
@@ -520,7 +520,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Helios",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "heliosdetection", 
    Callback = function(Value)
    
    
@@ -532,7 +532,7 @@ local Divider = Tab:CreateDivider()
 local Toggle = Tab:CreateToggle({
    Name = "Starscourge",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "starscourgedetection", 
    Callback = function(Value)
    
    
@@ -542,7 +542,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Sailor",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "sailordetection", 
    Callback = function(Value)
    
    
@@ -552,7 +552,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Sirius",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "siriusdetection", 
    Callback = function(Value)
    
    
@@ -562,7 +562,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Arcane : Legacy",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "legacydetection", 
    Callback = function(Value)
    
    
@@ -572,7 +572,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Chromatic",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "chromaticdetection", 
    Callback = function(Value)
    
    
@@ -582,7 +582,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Aviator",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "aviatordetection", 
    Callback = function(Value)
    
    
@@ -592,7 +592,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Arcane : Dark",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "darkdetection", 
    Callback = function(Value)
    
    
@@ -602,7 +602,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Ethereal",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "etherealdetection", 
    Callback = function(Value)
    
    
@@ -612,7 +612,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Overseer",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "overseerdetection", 
    Callback = function(Value)
    
    
@@ -622,7 +622,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Exotic : Apex",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "apexdetection", 
    Callback = function(Value)
    
    
@@ -632,7 +632,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Matrix",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "matrixdetection", 
    Callback = function(Value)
    
    
@@ -642,7 +642,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Twilight : Iridescent Memory",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "iridescentdetection", 
    Callback = function(Value)
    
    
@@ -652,7 +652,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Sailor : Flying Dutchman",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "dutchdetection", 
    Callback = function(Value)
    
    
@@ -664,7 +664,7 @@ local Divider = Tab:CreateDivider()
 local Toggle = Tab:CreateToggle({
    Name = "Chromatic : Genesis",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "genesisdetection", 
    Callback = function(Value)
    
    
@@ -674,7 +674,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Starscourge : Radiant",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "radiantdetection", 
    Callback = function(Value)
    
    
@@ -684,7 +684,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Overture",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "overturedetection", 
    Callback = function(Value)
    
    
@@ -694,7 +694,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Symphony",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "symphonydetection", 
    Callback = function(Value)
    
    
@@ -704,7 +704,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Impeached",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "impeacheddetection", 
    Callback = function(Value)
    
    
@@ -714,7 +714,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Archangel",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "archdetection", 
    Callback = function(Value)
    
    
@@ -724,7 +724,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Bloodlust",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "blooddetection", 
    Callback = function(Value)
    
    
@@ -734,7 +734,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Overture : History",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "historydetection", 
    Callback = function(Value)
    
    
@@ -744,7 +744,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Atlas",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "atlasdetection", 
    Callback = function(Value)
    
    
@@ -754,7 +754,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Abyssal Hunter",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "abyssaldetection", 
    Callback = function(Value)
    
    
@@ -764,7 +764,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Gargantua",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "gargantuadetection", 
    Callback = function(Value)
    
    
@@ -774,7 +774,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Apostolos",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "apostolosdetection", 
    Callback = function(Value)
    
    
@@ -784,7 +784,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Ruins",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "ruinsdetection", 
    Callback = function(Value)
    
    
@@ -794,7 +794,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Matrix : Overdrive",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "overdrivedetection", 
    Callback = function(Value)
    
    
@@ -804,7 +804,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Matrix : Reality",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "realitydetection", 
    Callback = function(Value)
    
    
@@ -814,7 +814,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Sovereign",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "sovereigndetection", 
    Callback = function(Value)
    
    
@@ -824,7 +824,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Ruins : Withered",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "withereddetection", 
    Callback = function(Value)
    
    
@@ -834,7 +834,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Aegis",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "aegisdetection", 
    Callback = function(Value)
    
    
@@ -846,7 +846,7 @@ local Divider = Tab:CreateDivider()
 local Toggle = Tab:CreateToggle({
    Name = "Pixelation",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "pixeldetection", 
    Callback = function(Value)
    
    
@@ -856,7 +856,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Luminosity",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "lumidetection", 
    Callback = function(Value)
    
    
@@ -868,7 +868,7 @@ local Section = Tab:CreateSection("Biomes")
 local Toggle = Tab:CreateToggle({
    Name = "Windy Weather",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "windydetection", 
    Callback = function(Value)
    
    
@@ -878,7 +878,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Snowy Weather",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "snowydetection", 
    Callback = function(Value)
    
    
@@ -888,7 +888,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Rainy Weather",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "rainydetection", 
    Callback = function(Value)
    
    
@@ -900,7 +900,7 @@ local Divider = Tab:CreateDivider()
 local Toggle = Tab:CreateToggle({
    Name = "Sandstorm Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "sanddetection", 
    Callback = function(Value)
    
    
@@ -910,7 +910,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Hell Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "helldetection", 
    Callback = function(Value)
    
    
@@ -920,7 +920,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Starfall Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "starfalldetection", 
    Callback = function(Value)
    
    
@@ -930,7 +930,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Corruption Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "corruptiondetection", 
    Callback = function(Value)
    
    
@@ -940,7 +940,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Null Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "nulldetection", 
    Callback = function(Value)
    
    
@@ -952,7 +952,7 @@ local Divider = Tab:CreateDivider()
 local Toggle = Tab:CreateToggle({
    Name = "Dreamscape Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "dreamdetection", 
    Callback = function(Value)
    
    
@@ -962,7 +962,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Glitched Biome",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "glitcheddetection", 
    Callback = function(Value)
    
    
@@ -974,7 +974,7 @@ local Section = Tab:CreateSection("Limited Auras")
 local Toggle = Tab:CreateToggle({
    Name = "Flushed : Troll",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "trolldetection", 
    Callback = function(Value)
    
    
@@ -984,7 +984,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Origin : Onion",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "oniondetection", 
    Callback = function(Value)
    
    
@@ -994,7 +994,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Glock : The Glock of the Sky",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "glockoftheskydetection", 
    Callback = function(Value)
    
    
