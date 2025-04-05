@@ -959,4 +959,38 @@ local Toggle = Tab:CreateToggle({
    end,
 })
 
+local Section = Tab:CreateSection("Limited Auras")
 
+local Toggle = Tab:CreateToggle({
+   Name = "Flushed : Troll",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Origin : Onion",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Glock : The Glock of the Sky",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Section = Tab:CreateSection("Limited Biomes")
+
+local Paragraph = Tab:CreateParagraph({Title = "Limited Biomes", Content = "There are NO Limited Biomes as of the 2025 April Fools Event."})
