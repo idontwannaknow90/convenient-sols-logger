@@ -853,3 +853,110 @@ local Toggle = Tab:CreateToggle({
    end,
 })
 
+local Section = Tab:CreateSection("Biomes")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Windy Weather",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Snowy Weather",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Rainy Weather",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Divider = Tab:CreateDivider()
+
+local Toggle = Tab:CreateToggle({
+   Name = "Sandstorm Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Hell Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Starfall Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Corruption Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Null Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Divider = Tab:CreateDivider()
+
+local Toggle = Tab:CreateToggle({
+   Name = "Dreamscape Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Glitched Biome",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+   
+   
+   end,
+})
+
+
