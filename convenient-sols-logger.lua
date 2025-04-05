@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Chat Logger", 4483362458) 
+local Tab = Window:CreateTab("Logger", 4483362458) 
 local Section = Tab:CreateSection("Activation")
 
 local Toggle = Tab:CreateToggle({
