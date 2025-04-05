@@ -40,7 +40,7 @@ local Section = Tab:CreateSection("Activation")
 local Toggle = Tab:CreateToggle({
    Name = "Aura Logger",
    CurrentValue = false,
-   Flag = "Toggle1",
+   Flag = "logger1",
    Callback = function(Value)
    -- The function that takes place when the toggle is pressed
    -- The variable (Value) is a boolean on whether the toggle is true or false
@@ -50,7 +50,17 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Biome Logger",
    CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "logger2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Merchant Logger",
+   CurrentValue = false,
+   Flag = "logger3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
    -- The function that takes place when the toggle is pressed
    -- The variable (Value) is a boolean on whether the toggle is true or false
@@ -64,7 +74,7 @@ local Input = Tab:CreateInput({
    CurrentValue = "",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
+   Flag = "Input100k",
    Callback = function(Text)
    -- The function that takes place when the input is changed
    -- The variable (Text) is a string for the value in the text box
@@ -76,7 +86,7 @@ local Input = Tab:CreateInput({
    CurrentValue = "",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
+   Flag = "Input1M",
    Callback = function(Text)
    -- The function that takes place when the input is changed
    -- The variable (Text) is a string for the value in the text box
@@ -88,7 +98,7 @@ local Input = Tab:CreateInput({
    CurrentValue = "",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
+   Flag = "Input10M",
    Callback = function(Text)
    -- The function that takes place when the input is changed
    -- The variable (Text) is a string for the value in the text box
@@ -100,7 +110,7 @@ local Input = Tab:CreateInput({
    CurrentValue = "",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
+   Flag = "Input100M",
    Callback = function(Text)
    -- The function that takes place when the input is changed
    -- The variable (Text) is a string for the value in the text box
@@ -112,7 +122,7 @@ local Input = Tab:CreateInput({
    CurrentValue = "",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
+   Flag = "Input1B",
    Callback = function(Text)
    -- The function that takes place when the input is changed
    -- The variable (Text) is a string for the value in the text box
@@ -126,7 +136,7 @@ local Input = Tab:CreateInput({
    CurrentValue = "",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
+   Flag = "normalbioinput",
    Callback = function(Text)
    -- The function that takes place when the input is changed
    -- The variable (Text) is a string for the value in the text box
@@ -135,7 +145,7 @@ local Input = Tab:CreateInput({
 
 local Input = Tab:CreateInput({
    Name = "Rare Biomes",
-   CurrentValue = "",
+   CurrentValue = "rarebioinput",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
@@ -149,7 +159,7 @@ local Section = Tab:CreateSection("Webhook URLS (Limited)")
 
 local Input = Tab:CreateInput({
    Name = "Limited Auras",
-   CurrentValue = "",
+   CurrentValue = "auralimitedinput",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
@@ -161,7 +171,7 @@ local Input = Tab:CreateInput({
 
 local Input = Tab:CreateInput({
    Name = "Limited Biomes",
-   CurrentValue = "",
+   CurrentValue = "biomelimitedinput",
    PlaceholderText = "Input Placeholder",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
@@ -178,7 +188,7 @@ local Section = Tab:CreateSection("Auras")
 local Toggle = Tab:CreateToggle({
    Name = "Exotic",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "exodetection", 
    Callback = function(Value)
    
    
@@ -188,7 +198,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Diaboli : Void",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "diabolidetection", 
    Callback = function(Value)
    
    
@@ -198,7 +208,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Undead : Devil",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "devildetection", 
    Callback = function(Value)
    
    
@@ -208,7 +218,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Comet",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "cometdetection", 
    Callback = function(Value)
    
    
@@ -218,7 +228,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Jade",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "jadedetection", 
    Callback = function(Value)
    
    
@@ -228,7 +238,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Spectre",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "spectredetection", 
    Callback = function(Value)
    
    
@@ -238,7 +248,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Jazz",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "jazzdetection", 
    Callback = function(Value)
    
    
@@ -248,7 +258,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Bounded",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "boundeddetection", 
    Callback = function(Value)
    
    
@@ -258,7 +268,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Celestial",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "celestialdetection", 
    Callback = function(Value)
    
    
@@ -268,7 +278,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Kyawthuite",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "kyawthuitedetection", 
    Callback = function(Value)
    
    
@@ -280,7 +290,7 @@ local Divider = Tab:CreateDivider()
 local Toggle = Tab:CreateToggle({
    Name = "Arcane",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "arcanedetection", 
    Callback = function(Value)
    
    
@@ -290,7 +300,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Magnetic : Reverse Polarity",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "polaritydetection", 
    Callback = function(Value)
    
    
@@ -300,7 +310,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Undefined",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "undefineddetection", 
    Callback = function(Value)
    
    
@@ -310,7 +320,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Rage : Brawler",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "brawlerdetection", 
    Callback = function(Value)
    
    
@@ -320,7 +330,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Astral",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "astraldetection", 
    Callback = function(Value)
    
    
@@ -330,7 +340,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Cosmos",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "cosmosdetection", 
    Callback = function(Value)
    
    
@@ -340,7 +350,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Gravitational",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "gravitationaldetection", 
    Callback = function(Value)
    
    
@@ -350,7 +360,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Bounded : Unbound",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "unbounddetection", 
    Callback = function(Value)
    
    
@@ -360,7 +370,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Virtual",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "virtualdetection", 
    Callback = function(Value)
    
    
@@ -370,7 +380,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Savior",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "saviordetection", 
    Callback = function(Value)
    
    
@@ -380,7 +390,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Aquatic : Flame",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "flamedetection", 
    Callback = function(Value)
    
    
@@ -390,7 +400,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Poseidon",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "poseidondetection", 
    Callback = function(Value)
    
    
@@ -400,7 +410,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Zeus",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "zeusdetection", 
    Callback = function(Value)
    
    
@@ -410,7 +420,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Solar : Solstice",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "solsticedetection", 
    Callback = function(Value)
    
    
@@ -420,7 +430,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Lunar : Full Moon",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "fmdetection", 
    Callback = function(Value)
    
    
@@ -430,7 +440,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Galaxy",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "galaxydetection", 
    Callback = function(Value)
    
    
@@ -440,7 +450,7 @@ local Toggle = Tab:CreateToggle({
 local Toggle = Tab:CreateToggle({
    Name = "Twilight",
    CurrentValue = false,
-   Flag = "Toggle1", 
+   Flag = "twilightdetection", 
    Callback = function(Value)
    
    
