@@ -1004,3 +1004,43 @@ local Toggle = Tab:CreateToggle({
 local Section = Tab:CreateSection("Limited Biomes")
 
 local Paragraph = Tab:CreateParagraph({Title = "Limited Biomes", Content = "There are NO Limited Biomes as of the 2025 April Fools Event."})
+
+local Tab = Window:CreateTab("Miscellanous", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Miscellanous")
+
+local Toggle = Tab:CreateToggle({
+   Name = "Anti-AFK",
+   CurrentValue = false,
+   Flag = "AntiAFKToggle",
+   Callback = function(Value)
+      if Value then
+         local VirtualUser = game:GetService("VirtualUser")
+         local Players = game:GetService("Players")
+         
+         getgenv().AntiAFKConnection = Players.LocalPlayer.Idled:Connect(function()
+            VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+            task.wait(1)
+            VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+         end)
+
+         Rayfield:Notify({
+            Title = "Anti-AFK",
+            Content = "Anti-AFK Enabled!",
+            Duration = 3,
+         })
+      else
+         if getgenv().AntiAFKConnection then
+            getgenv().AntiAFKConnection:Disconnect()
+            getgenv().AntiAFKConnection = nil
+         end
+
+         Rayfield:Notify({
+            Title = "Anti-AFK",
+            Content = "Anti-AFK Disabled!",
+            Duration = 3,
+         })
+      end
+   end,
+})
+
