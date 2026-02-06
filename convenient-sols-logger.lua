@@ -366,6 +366,16 @@ local Slider = Tab:Slider({
     end
 })
 
+local Toggle = Tab:Toggle({
+    Title = "Convert Balloon at Selected Minutes",
+    Desc = "Converts your balloon based on the minutes selected on the slider.",
+    Icon = "balloon",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
 
 local Tab = Window:Tab({
     Title = "Planter",
