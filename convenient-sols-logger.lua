@@ -1,4 +1,4 @@
-local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+elocal WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
     Title = "BSS Modded : Rebirths",
@@ -251,6 +251,18 @@ local Toggle = Tab:Toggle({
 })
 
 local Toggle = Tab:Toggle({
+    Title = "Farm Triangulate",
+    Desc = "Farm's triangulate from Vector Bee.",
+    Icon = "triangle-right",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+
+local Toggle = Tab:Toggle({
     Title = "Farm Clouds",
     Desc = "Farms below the clouds.",
     Icon = "cloud",
@@ -335,6 +347,33 @@ local Dropdown = Tab:Dropdown({
     Callback = function(option) 
         -- option is a table: { "Category A", "Category B" }
         print("Categories selected: " .. game:GetService("HttpService"):JSONEncode(option)) 
+    end
+})
+
+Tab:Divider()
+
+local Slider = Tab:Slider({
+    Title = "Convert Balloon Blessing at %",
+    Desc = "What percentage to convert your balloon blessing.",
+    Step = 1,
+    Value = {
+        Min = 1,
+        Max = 59,
+        Default = 30,
+    },
+    Callback = function(value)
+        print(value)
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Convert at Balloon Blessing",
+    Desc = "Convert the selected time for the blessing.",
+    Icon = "dollar-sign",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
     end
 })
 
