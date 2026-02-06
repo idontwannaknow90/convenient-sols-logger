@@ -352,14 +352,17 @@ local Dropdown = Tab:Dropdown({
 
 Tab:Divider()
 
-local Toggle = Tab:Toggle({
-    Title = "Convert Balloon Blessing",
-    Desc = "Convert balloon blessing at selected minutes.",
-    Icon = "balloon",
-    Type = "Toggle",
-    Value = false, -- default value
-    Callback = function(state) 
-        print("Toggle Activated" .. tostring(state))
+local Slider = Tab:Slider({
+    Title = "Convert Balloon Blessing at Minutes",
+    Desc = "What percentage to convert your balloon blessing.",
+    Step = 1,
+    Value = {
+        Min = 1,
+        Max = 59,
+        Default = 30,
+    },
+    Callback = function(value)
+        print(value)
     end
 })
 
