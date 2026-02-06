@@ -224,6 +224,77 @@ local Toggle = Tab:Toggle({
     end
 })
 
+local Section = Tab:Section({ 
+    Title = "Farm Abilities",
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Marks",
+    Desc = "Farms pollen, honey, and precise marks.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Precision",
+    Desc = "Does precise bee target practice.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Clouds",
+    Desc = "Farms below the clouds.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Fuzz Bombs",
+    Desc = "Farms fuzz bombs to pollinate flowers.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Bubbles",
+    Desc = "Similar to Auto Pop Star but pops bubbles even without the passive being activated.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Flames",
+    Desc = "Will stand on flames while farming, can be dark flames with dark scythe.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+
 local Tab = Window:Tab({
     Title = "Planter",
     Icon = "amphora", 
