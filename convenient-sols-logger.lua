@@ -367,8 +367,8 @@ local Slider = Tab:Slider({
 })
 
 local Toggle = Tab:Toggle({
-    Title = "Convert at Balloon Blessing",
-    Desc = "Convert the selected time for the blessing.",
+    Title = "Convert Balloon Blessing",
+    Desc = "Convert balloon blessing at selected minutes.",
     Icon = "balloon",
     Type = "Toggle",
     Value = false, -- default value
