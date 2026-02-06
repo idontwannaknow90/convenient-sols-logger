@@ -1,1068 +1,238 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
-local Window = Rayfield:CreateWindow({
-   Name = "Sol's RNG Logger",
-   Icon = 0, 
-   LoadingTitle = "Sol's RNG Logger",
-   LoadingSubtitle = "by (CANT TELL)",
-   Theme = "Default", 
-
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, 
-
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil,
-      FileName = "Big Hub"
-   },
-
-   Discord = {
-      Enabled = false, 
-      Invite = "noinvitelink", 
-      RememberJoins = true 
-   },
-
-   KeySystem = true, 
-   KeySettings = {
-      Title = "Whitelist Key",
-      Subtitle = "Input the Whitelist Key",
-      Note = "This Script is for Friends Only, No Randoms, DM the Owner",
-      FileName = "Key", 
-      SaveKey = true, 
-      GrabKeyFromSite = false,
-      Key = {"rnglog888"}
-   }
-})
-
-local Tab = Window:CreateTab("Logger", 4483362458) 
-local Section = Tab:CreateSection("Activation")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Aura Logger",
-   CurrentValue = false,
-   Flag = "logger1",
-   Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Biome Logger",
-   CurrentValue = false,
-   Flag = "logger2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Merchant Logger",
-   CurrentValue = false,
-   Flag = "logger3", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
-
-local Section = Tab:CreateSection("Webhook URLS (Auras)")
-
-local Input = Tab:CreateInput({
-   Name = "100K Auras",
-   CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input100k",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Input = Tab:CreateInput({
-   Name = "1M Auras",
-   CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1M",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Input = Tab:CreateInput({
-   Name = "10M Auras",
-   CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input10M",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Input = Tab:CreateInput({
-   Name = "100M Auras",
-   CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input100M",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Input = Tab:CreateInput({
-   Name = "1B Auras",
-   CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1B",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Section = Tab:CreateSection("Webhook URLS (Biome)")
-
-local Input = Tab:CreateInput({
-   Name = "Normal Biomes",
-   CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "normalbioinput",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Input = Tab:CreateInput({
-   Name = "Rare Biomes",
-   CurrentValue = "rarebioinput",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Section = Tab:CreateSection("Webhook URLS (Limited)")
-
-local Input = Tab:CreateInput({
-   Name = "Limited Auras",
-   CurrentValue = "auralimitedinput",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Input = Tab:CreateInput({
-   Name = "Limited Biomes",
-   CurrentValue = "biomelimitedinput",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
-   end,
-})
-
-local Tab = Window:CreateTab("Detection", 4483362458)
-
-local Section = Tab:CreateSection("Auras")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Exotic",
-   CurrentValue = false,
-   Flag = "exodetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Diaboli : Void",
-   CurrentValue = false,
-   Flag = "diabolidetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Undead : Devil",
-   CurrentValue = false,
-   Flag = "devildetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Comet",
-   CurrentValue = false,
-   Flag = "cometdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Jade",
-   CurrentValue = false,
-   Flag = "jadedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Spectre",
-   CurrentValue = false,
-   Flag = "spectredetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Jazz",
-   CurrentValue = false,
-   Flag = "jazzdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Bounded",
-   CurrentValue = false,
-   Flag = "boundeddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Celestial",
-   CurrentValue = false,
-   Flag = "celestialdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Kyawthuite",
-   CurrentValue = false,
-   Flag = "kyawthuitedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Divider = Tab:CreateDivider()
-
-local Toggle = Tab:CreateToggle({
-   Name = "Arcane",
-   CurrentValue = false,
-   Flag = "arcanedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Magnetic : Reverse Polarity",
-   CurrentValue = false,
-   Flag = "polaritydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Undefined",
-   CurrentValue = false,
-   Flag = "undefineddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Rage : Brawler",
-   CurrentValue = false,
-   Flag = "brawlerdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Astral",
-   CurrentValue = false,
-   Flag = "astraldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Cosmos",
-   CurrentValue = false,
-   Flag = "cosmosdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Gravitational",
-   CurrentValue = false,
-   Flag = "gravitationaldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Bounded : Unbound",
-   CurrentValue = false,
-   Flag = "unbounddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Virtual",
-   CurrentValue = false,
-   Flag = "virtualdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Savior",
-   CurrentValue = false,
-   Flag = "saviordetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Aquatic : Flame",
-   CurrentValue = false,
-   Flag = "flamedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Poseidon",
-   CurrentValue = false,
-   Flag = "poseidondetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Zeus",
-   CurrentValue = false,
-   Flag = "zeusdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Solar : Solstice",
-   CurrentValue = false,
-   Flag = "solsticedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Lunar : Full Moon",
-   CurrentValue = false,
-   Flag = "fmdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Galaxy",
-   CurrentValue = false,
-   Flag = "galaxydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Twilight",
-   CurrentValue = false,
-   Flag = "twilightdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Origin",
-   CurrentValue = false,
-   Flag = "origindetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Hades",
-   CurrentValue = false,
-   Flag = "hadesdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Celestial : Divine",
-   CurrentValue = false,
-   Flag = "divinedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Hypervolt",
-   CurrentValue = false,
-   Flag = "voltdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Velocity",
-   CurrentValue = false,
-   Flag = "velocitydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Nihility",
-   CurrentValue = false,
-   Flag = "nihildetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Helios",
-   CurrentValue = false,
-   Flag = "heliosdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Divider = Tab:CreateDivider()
-
-local Toggle = Tab:CreateToggle({
-   Name = "Starscourge",
-   CurrentValue = false,
-   Flag = "starscourgedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Sailor",
-   CurrentValue = false,
-   Flag = "sailordetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Sirius",
-   CurrentValue = false,
-   Flag = "siriusdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Arcane : Legacy",
-   CurrentValue = false,
-   Flag = "legacydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Chromatic",
-   CurrentValue = false,
-   Flag = "chromaticdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Aviator",
-   CurrentValue = false,
-   Flag = "aviatordetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Arcane : Dark",
-   CurrentValue = false,
-   Flag = "darkdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Ethereal",
-   CurrentValue = false,
-   Flag = "etherealdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Overseer",
-   CurrentValue = false,
-   Flag = "overseerdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Exotic : Apex",
-   CurrentValue = false,
-   Flag = "apexdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Matrix",
-   CurrentValue = false,
-   Flag = "matrixdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Twilight : Iridescent Memory",
-   CurrentValue = false,
-   Flag = "iridescentdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Sailor : Flying Dutchman",
-   CurrentValue = false,
-   Flag = "dutchdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Divider = Tab:CreateDivider()
-
-local Toggle = Tab:CreateToggle({
-   Name = "Chromatic : Genesis",
-   CurrentValue = false,
-   Flag = "genesisdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Starscourge : Radiant",
-   CurrentValue = false,
-   Flag = "radiantdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Overture",
-   CurrentValue = false,
-   Flag = "overturedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Symphony",
-   CurrentValue = false,
-   Flag = "symphonydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Impeached",
-   CurrentValue = false,
-   Flag = "impeacheddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Archangel",
-   CurrentValue = false,
-   Flag = "archdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Bloodlust",
-   CurrentValue = false,
-   Flag = "blooddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Overture : History",
-   CurrentValue = false,
-   Flag = "historydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Atlas",
-   CurrentValue = false,
-   Flag = "atlasdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Abyssal Hunter",
-   CurrentValue = false,
-   Flag = "abyssaldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Gargantua",
-   CurrentValue = false,
-   Flag = "gargantuadetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Apostolos",
-   CurrentValue = false,
-   Flag = "apostolosdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Ruins",
-   CurrentValue = false,
-   Flag = "ruinsdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Matrix : Overdrive",
-   CurrentValue = false,
-   Flag = "overdrivedetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Matrix : Reality",
-   CurrentValue = false,
-   Flag = "realitydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Sovereign",
-   CurrentValue = false,
-   Flag = "sovereigndetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Ruins : Withered",
-   CurrentValue = false,
-   Flag = "withereddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Aegis",
-   CurrentValue = false,
-   Flag = "aegisdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Divider = Tab:CreateDivider()
-
-local Toggle = Tab:CreateToggle({
-   Name = "Pixelation",
-   CurrentValue = false,
-   Flag = "pixeldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Luminosity",
-   CurrentValue = false,
-   Flag = "lumidetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Section = Tab:CreateSection("Biomes")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Windy Weather",
-   CurrentValue = false,
-   Flag = "windydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Snowy Weather",
-   CurrentValue = false,
-   Flag = "snowydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Rainy Weather",
-   CurrentValue = false,
-   Flag = "rainydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Divider = Tab:CreateDivider()
-
-local Toggle = Tab:CreateToggle({
-   Name = "Sandstorm Biome",
-   CurrentValue = false,
-   Flag = "sanddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Hell Biome",
-   CurrentValue = false,
-   Flag = "helldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Starfall Biome",
-   CurrentValue = false,
-   Flag = "starfalldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Corruption Biome",
-   CurrentValue = false,
-   Flag = "corruptiondetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Null Biome",
-   CurrentValue = false,
-   Flag = "nulldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Divider = Tab:CreateDivider()
-
-local Toggle = Tab:CreateToggle({
-   Name = "Dreamscape Biome",
-   CurrentValue = false,
-   Flag = "dreamdetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Glitched Biome",
-   CurrentValue = false,
-   Flag = "glitcheddetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Section = Tab:CreateSection("Merchants")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Mari",
-   CurrentValue = false,
-   Flag = "maridetection", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Jester",
-   CurrentValue = false,
-   Flag = "jesterdetection", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Value)
-   -- The function that takes place when the toggle is pressed
-   -- The variable (Value) is a boolean on whether the toggle is true or false
-   end,
-})
-
-local Section = Tab:CreateSection("Limited Auras")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Flushed : Troll",
-   CurrentValue = false,
-   Flag = "trolldetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Origin : Onion",
-   CurrentValue = false,
-   Flag = "oniondetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Toggle = Tab:CreateToggle({
-   Name = "Glock : The Glock of the Sky",
-   CurrentValue = false,
-   Flag = "glockoftheskydetection", 
-   Callback = function(Value)
-   
-   
-   end,
-})
-
-local Section = Tab:CreateSection("Limited Biomes")
-
-local Paragraph = Tab:CreateParagraph({Title = "Limited Biomes", Content = "There are NO Limited Biomes as of the 2025 April Fools Event."})
-
-local Tab = Window:CreateTab("Miscellanous", 4483362458) -- Title, Image
-
-local Section = Tab:CreateSection("Miscellanous")
-
-local Toggle = Tab:CreateToggle({
-   Name = "Anti-AFK",
-   CurrentValue = false,
-   Flag = "miscellaneousafk",
-   Callback = function(Value)
-      if Value then
-         local VirtualUser = game:GetService("VirtualUser")
-         local Players = game:GetService("Players")
-         
-         getgenv().AntiAFKConnection = Players.LocalPlayer.Idled:Connect(function()
-            VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-            task.wait(1)
-            VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-         end)
-
-         Rayfield:Notify({
-            Title = "Anti-AFK",
-            Content = "Anti-AFK Enabled!",
-            Duration = 3,
-         })
-      else
-         if getgenv().AntiAFKConnection then
-            getgenv().AntiAFKConnection:Disconnect()
-            getgenv().AntiAFKConnection = nil
-         end
-
-         Rayfield:Notify({
-            Title = "Anti-AFK",
-            Content = "Anti-AFK Disabled!",
-            Duration = 3,
-         })
-      end
-   end,
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+
+local Window = WindUI:CreateWindow({
+    Title = "BSS Modded : Rebirths",
+    Icon = "flower",
+    Author = "by Onett (source: trust me bro)",
+    Folder = "BSSMR",
+    
+    Size = UDim2.fromOffset(580, 460),
+    MinSize = Vector2.new(560, 350),
+    MaxSize = Vector2.new(850, 560),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 200,
+    BackgroundImageTransparency = 0.42,
+    HideSearchBar = true,
+    ScrollBarEnabled = false,
+    
+    User = {
+        Enabled = true,
+        Anonymous = false,
+        Callback = function()
+            print("clicked")
+        end,
+    },
+})
+
+Window:Tag({
+    Title = "v0.1 BETA",
+    Icon = "github",
+    Color = Color3.fromHex("#30ff6a"),
+    Radius = 0, -- from 0 to 13
+})
+
+local Section = Window:Section({
+    Title = "Farming",
+    Icon = "hammer",
+    Opened = true,
+})
+
+local Tab = Window:Tab({
+    Title = "Field",
+    Icon = "flower-2", 
+    Locked = false,
+})
+
+local Section = Tab:Section({ 
+    Title = "Field Selection",
+})
+
+local Dropdown = Tab:Dropdown({
+    Title = "Field",
+    Desc = "What field to farm.",
+    Values = { "Category A", "Category B", "Category C" },
+    Value = "Category A",
+    Callback = function(option) 
+        print("Category selected: " .. option) 
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Farm Field",
+    Desc = "Farms the selected field.",
+    Icon = "backpack",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Farm." .. tostring(state))
+    end
+})
+
+local Section = Tab:Section({ 
+    Title = "Farm Settings",
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Tool",
+    Desc = "Automatically swings your tool.",
+    Icon = "shovel",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Sprinkler",
+    Desc = "Auto places sprinklers in a field.",
+    Icon = "droplet",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Convert",
+    Desc = "Converts for you.",
+    Icon = "badge-dollar-sign",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Section = Tab:Section({ 
+    Title = "Farm Passives",
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Pop Star",
+    Desc = "Pops bubbles to fill up bubble bloat and pop star stack.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Scorching Star",
+    Desc = "Stands near flames to fill up scorching star stack.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Gummy Star",
+    Desc = "Farms goo to fill up gummy star, also collects honey tokens and gumdrops.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+Tab:Divider()
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Star Shower",
+    Desc = "Farms star shower for good inspire.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+Tab:Divider()
+
+local Toggle = Tab:Toggle({
+    Title = "Auto Guiding Star",
+    Desc = "Farms on a field with guiding star, can whitelist fields.",
+    Icon = "star",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Dropdown = Tab:Dropdown({
+    Title = "Guiding Star Whitelist",
+    Desc = "Fields allowed to be farmed in for Guiding Star",
+    Values = { "Category A", "Category B", "Category C" },
+    Value = { "Category A" },
+    Multi = true,
+    AllowNone = true,
+    Callback = function(option) 
+        -- option is a table: { "Category A", "Category B" }
+        print("Categories selected: " .. game:GetService("HttpService"):JSONEncode(option)) 
+    end
+})
+
+Tab:Divider()
+
+local Toggle = Tab:Toggle({
+    Title = "Maintain Gummy Morph",
+    Desc = "Times gumdrop usage properly for unlimited gummy morph and conversion (You need to be gumdrop rich if you wanna maintain this while macroing.)",
+    Icon = "citrus",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+Tab:Divider()
+
+local Slider = Tab:Slider({
+    Title = "Max Combo Coconut",
+    Desc = "Maximum amount of times Combo Coconut can be catched before stopping.",
+    
+    Step = 1,
+    Value = {
+        Min = 1,
+        Max = 500,
+        Default = 50,
+    },
+    Callback = function(value)
+        print(value)
+    end
+})
+
+local Toggle = Tab:Toggle({
+    Title = "Catch Combo Coconuts",
+    Desc = "Automatically catches Combo Coconuts for Coco Combo Buff, best used in Private Servers.",
+    Icon = "vegan",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Tab = Window:Tab({
+    Title = "Planter",
+    Icon = "amphora", 
+    Locked = false,
+})
+
+local Tab = Window:Tab({
+    Title = "Puffshroom",
+    Icon = "pill-bottle", 
+    Locked = false,
 })
 
