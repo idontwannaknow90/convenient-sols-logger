@@ -353,7 +353,7 @@ local Dropdown = Tab:Dropdown({
 Tab:Divider()
 
 local Slider = Tab:Slider({
-    Title = "Convert Balloon Blessing at %",
+    Title = "Convert Balloon Blessing at Minutes",
     Desc = "What percentage to convert your balloon blessing.",
     Step = 1,
     Value = {
@@ -376,6 +376,7 @@ local Toggle = Tab:Toggle({
         print("Toggle Activated" .. tostring(state))
     end
 })
+
 
 local Tab = Window:Tab({
     Title = "Planter",
