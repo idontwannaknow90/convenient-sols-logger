@@ -231,7 +231,7 @@ local Section = Tab:Section({
 local Toggle = Tab:Toggle({
     Title = "Farm Marks",
     Desc = "Farms pollen, honey, and precise marks.",
-    Icon = "star",
+    Icon = "badge",
     Type = "Toggle",
     Value = false, -- default value
     Callback = function(state) 
@@ -242,7 +242,7 @@ local Toggle = Tab:Toggle({
 local Toggle = Tab:Toggle({
     Title = "Farm Precision",
     Desc = "Does precise bee target practice.",
-    Icon = "star",
+    Icon = "eye",
     Type = "Toggle",
     Value = false, -- default value
     Callback = function(state) 
@@ -253,7 +253,7 @@ local Toggle = Tab:Toggle({
 local Toggle = Tab:Toggle({
     Title = "Farm Clouds",
     Desc = "Farms below the clouds.",
-    Icon = "star",
+    Icon = "cloud",
     Type = "Toggle",
     Value = false, -- default value
     Callback = function(state) 
@@ -264,7 +264,7 @@ local Toggle = Tab:Toggle({
 local Toggle = Tab:Toggle({
     Title = "Farm Fuzz Bombs",
     Desc = "Farms fuzz bombs to pollinate flowers.",
-    Icon = "star",
+    Icon = "bomb",
     Type = "Toggle",
     Value = false, -- default value
     Callback = function(state) 
@@ -275,7 +275,7 @@ local Toggle = Tab:Toggle({
 local Toggle = Tab:Toggle({
     Title = "Farm Bubbles",
     Desc = "Similar to Auto Pop Star but pops bubbles even without the passive being activated.",
-    Icon = "star",
+    Icon = "bubbles",
     Type = "Toggle",
     Value = false, -- default value
     Callback = function(state) 
@@ -286,7 +286,7 @@ local Toggle = Tab:Toggle({
 local Toggle = Tab:Toggle({
     Title = "Farm Flames",
     Desc = "Will stand on flames while farming, can be dark flames with dark scythe.",
-    Icon = "star",
+    Icon = "flame",
     Type = "Toggle",
     Value = false, -- default value
     Callback = function(state) 
@@ -294,6 +294,49 @@ local Toggle = Tab:Toggle({
     end
 })
 
+local Section = Tab:Section({ 
+    Title = "Convert Settings",
+})
+
+local Slider = Tab:Slider({
+    Title = "Convert at %",
+    Desc = "What percentage to convert your bag.",
+    Step = 1,
+    Value = {
+        Min = 1,
+        Max = 100,
+        Default = 100,
+    },
+    Callback = function(value)
+        print(value)
+    end
+})
+
+Tab:Divider()
+
+local Toggle = Tab:Toggle({
+    Title = "Instant Convert",
+    Desc = "Whether or not you want to use instant converting tools.",
+    Icon = "dollar-sign",
+    Type = "Toggle",
+    Value = false, -- default value
+    Callback = function(state) 
+        print("Toggle Activated" .. tostring(state))
+    end
+})
+
+local Dropdown = Tab:Dropdown({
+    Title = "Allowed Instant Convert Tools",
+    Desc = "What is allowed to be used to instantly convert.",
+    Values = { "Coconut", "Ticket-Converter", "Micro-Converter"},
+    Value = { "Coconut" },
+    Multi = true,
+    AllowNone = true,
+    Callback = function(option) 
+        -- option is a table: { "Category A", "Category B" }
+        print("Categories selected: " .. game:GetService("HttpService"):JSONEncode(option)) 
+    end
+})
 
 local Tab = Window:Tab({
     Title = "Planter",
