@@ -52,8 +52,8 @@ local Section = Tab:Section({
 local Dropdown = Tab:Dropdown({
     Title = "Field",
     Desc = "What field to farm.",
-    Values = { "Placeholder", "Placeholder", "Placeholder" },
-    Value = "Placeholder",
+    Values = { "Placeholder 1", "Placeholder 2", "Placeholder 3" },
+    Value = "Placeholder 1",
     Callback = function(option) 
         print("Category selected: " .. option) 
     end
