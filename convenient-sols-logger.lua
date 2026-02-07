@@ -367,10 +367,10 @@ local Slider = Tab:Slider({
 })
 
 local Toggle = Tab:Toggle({
-    Title = "Convert Balloon at Selected Minutes",
-    Desc = "Converts your balloon based on the minutes selected on the slider.",
-    Icon = "balloon",
-    Type = "Toggle",
+    Title = "Toggle",
+    Desc = "Toggle Description",
+    Icon = "bird",
+    Type = "Checkbox",
     Value = false, -- default value
     Callback = function(state) 
         print("Toggle Activated" .. tostring(state))
