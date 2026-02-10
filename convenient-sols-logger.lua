@@ -4,6 +4,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local player = Players.LocalPlayer
 
 local toolClickRemote = ReplicatedStorage:WaitForChild("remoteFunctions"):WaitForChild("toolClick")
+local PlayerActivesCommand = remoteFunctions:WaitForChild("PlayerActivesCommand")
+local remoteFunctions = ReplicatedStorage:WaitForChild("remoteFunctions")
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
@@ -203,17 +205,30 @@ local Dropdown = Tab:Dropdown({
 
 Tab:Divider()
 
-local Toggle = Tab:Toggle({
+local MaintainGummyMorphToggle = Tab:Toggle({
     Title = "Maintain Gummy Morph",
-    Desc = "Times gumdrop usage properly for unlimited gummy morph and conversion (You need to be gumdrop rich if you wanna maintain this while macroing.)",
-    Icon = "citrus",
+    Desc = "This was supposed to be to maintain gummy morph back when the passive didn't have a cool down but now it does, just spams gumdrops, must have Gummy Mask though.",
+    Icon = "citrus",  
     Type = "Toggle",
-    Value = false, -- default value
-    Callback = function(state) 
-        print("Toggle Activated" .. tostring(state))
+    Value = false,
+    Callback = function(state)
+        if state then
+            print("gummy-morph-spam-on")
+
+            spawn(function()
+                while state do
+                    pcall(function()  -- safe call in case remote errors or kicks
+                        PlayerActivesCommand:InvokeServer({ Name = "Gumdrops" })
+                    end)
+                end
+                print("gummy-morph-spam-idk-but-this-aint-an-error-btw")
+            end)
+
+        else
+            print("gummy-morph-spam-off")
+        end
     end
 })
-
 Tab:Divider()
 
 local Slider = Tab:Slider({
