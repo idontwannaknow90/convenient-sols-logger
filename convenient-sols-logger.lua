@@ -5,7 +5,6 @@ local player = Players.LocalPlayer
 local toolClickRemote = ReplicatedStorage:WaitForChild("remoteFunctions"):WaitForChild("toolClick")
 local PlayerActivesCommand = remoteFunctions:WaitForChild("PlayerActivesCommand")
 local remoteFunctions = ReplicatedStorage:WaitForChild("remoteFunctions")
-local gummyMorphActive = false
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
@@ -202,47 +201,6 @@ local Dropdown = Tab:Dropdown({
         print("Categories selected: " .. game:GetService("HttpService"):JSONEncode(option)) 
     end
 })
-
-Tab:Divider()
-
-local MaintainGummyMorphToggle = Tab:Toggle({
-    Title = "Maintain Gummy Morph",
-    Desc = "Spams gumdrops remote to keep gummy morph active (no cooldown). Start slow if kicked.",
-    Icon = "citrus",
-    Type = "Toggle",
-    Value = false,
-    Callback = function(state)
-        gummyMorphActive = state
-        
-        if state then
-            print("gummy-morph-on")
-            
-            -- Only spawn the loop once (if not already running)
-            if not _G.GummyLoopSpawned then
-                _G.GummyLoopSpawned = true  -- flag to prevent multiples
-                
-                spawn(function()
-                    while true do
-                        if not gummyMorphActive then
-                            print("gummy-morph-pause")
-                            task.wait()  -- sleep longer when off
-                            continue
-                        end
-                        
-                        pcall(function()
-                            PlayerActivesCommand:InvokeServer({ Name = "Gumdrops" })
-                        end)
-                        
-                        task.wait()  -- just gonna bullshit it
-                    end
-                end)
-            end
-            
-        else
-            print("gummy-morph-off")
-        end
-    end
-})})
 
 Tab:Divider()
 
