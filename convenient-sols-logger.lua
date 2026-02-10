@@ -83,7 +83,7 @@ local Section = Tab:Section({
 
 local Toggle = Tab:Toggle({
     Title = "Auto Tool",
-    Desc = "Auto clicks tool remote.",
+    Desc = "Auto uses your tool.",
     Icon = "shovel",
     Type = "Toggle",
     Value = false,
@@ -92,12 +92,12 @@ local Toggle = Tab:Toggle({
             spawn(function()
                 while state do
                     toolClickRemote:InvokeServer()
-                    task.wait(0.15) -- safe rate
+                    task.wait() -- safe rate
                 end
             end)
-            print("[Auto Tool] ON")
+            print("auto-tool-on")
         else
-            print("[Auto Tool] OFF")
+            print("auto-tool-off")
         end
     end
 })
