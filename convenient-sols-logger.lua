@@ -1,3 +1,10 @@
+-- needed if i want this big chunky brick to work
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local player = Players.LocalPlayer
+
+local toolClickRemote = ReplicatedStorage:WaitForChild("remoteFunctions"):WaitForChild("toolClick")
+
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
@@ -76,14 +83,25 @@ local Section = Tab:Section({
 
 local Toggle = Tab:Toggle({
     Title = "Auto Tool",
-    Desc = "Automatically swings your tool.",
+    Desc = "Auto clicks tool remote.",
     Icon = "shovel",
     Type = "Toggle",
-    Value = false, -- default value
-    Callback = function(state) 
-        print("Toggle Activated" .. tostring(state))
+    Value = false,
+    Callback = function(state)
+        if state then
+            spawn(function()
+                while state do
+                    toolClickRemote:InvokeServer()
+                    task.wait(0.15) -- safe rate
+                end
+            end)
+            print("[Auto Tool] ON")
+        else
+            print("[Auto Tool] OFF")
+        end
     end
 })
+
 
 local Toggle = Tab:Toggle({
     Title = "Auto Sprinkler",
