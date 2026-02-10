@@ -1,4 +1,3 @@
--- needed if i want this big chunky brick to work
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local player = Players.LocalPlayer
